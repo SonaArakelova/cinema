@@ -1,0 +1,15 @@
+
+.active-button{
+    background-color: white !important ;
+    color: #2737c5 !important;
+}
+
+.link-button{
+    border: none !important;
+    border-radius: 0 !important;
+
+}
+
+ul{
+    background-color: rgb(20, 19, 19);
+}

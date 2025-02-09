@@ -1,0 +1,12 @@
+.remove-button{
+    margin-left: 3rem;
+    
+}
+
+.remove-button:hover{
+    border-radius: 0;
+    background-color: rgba(211, 211, 211, 0.081);
+    color: rgb(42, 42, 198);
+
+}
+

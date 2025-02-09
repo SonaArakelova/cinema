@@ -1,0 +1,65 @@
+.bg{
+  background-color: rgb(20, 19, 19);
+}
+
+header{
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-left: 3rem;
+}
+
+.logo span {
+  font-size: 1.2rem;
+}
+
+.logo h1 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+.backofh1{
+  background-color: #2737c5;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.buttons{
+  margin-right: 4rem;
+}
+
+button{
+  border-radius: 1rem;
+  background-color: rgb(20, 19, 19);
+  border: none;
+  color: white;
+  padding: .6rem;
+}
+
+.button-text{
+  color: #2737c5;
+}
+
+button:hover{
+  border-radius: 1rem;
+  background-color: rgb(50, 47, 47);
+}
+
+
+i{
+  font-size: 2rem;
+}
+
+.input{
+  width: 700px;
+  height: 2rem;
+  padding: 1rem;
+}
+
+

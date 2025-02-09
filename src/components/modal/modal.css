@@ -1,0 +1,9 @@
+.modal-content{
+    background-color: rgb(13, 12, 12) !important;
+    padding: 2rem !important;
+}
+
+
+.modal-header{
+    color: white;
+}
