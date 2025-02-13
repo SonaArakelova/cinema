@@ -7,3 +7,8 @@
 .modal-header{
     color: white;
 }
+
+
+.btn-close{
+    background-color: rgb(240, 207, 19) !important;
+}
