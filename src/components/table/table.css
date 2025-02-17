@@ -10,3 +10,14 @@
 
 }
 
+img{
+    margin-left: 5px;
+}
+
+.btn{
+    color: #2737c5 !important;
+}
+
+.btn:hover{
+    color: black !important;
+}

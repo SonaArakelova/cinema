@@ -102,10 +102,11 @@
 
 
 
-
-import React, { useReducer, useEffect } from "react";
+import React from 'react';
+import  { useReducer, useEffect } from "react";
 import { omdbApi } from "../../../api/movie.api.js";
 import { useLocalStorageState } from "../../../hook/use-local-storage-state.js";
+import { Flag } from "../../../components/flags/flags.jsx"
 import "./movie-details.css";
 
 const initialState = {
@@ -186,6 +187,19 @@ export const MovieDetails = ({ id }) => {
             width={200}
             className="h-auto rounded d-block"
           />
+          <ul className="list-group ">
+            {(state.movie?.Ratings || []).map((rating, index) => (
+              <li
+                key={rating.Source}
+                className="list-group-item d-flex justify-content-between align-items-center"
+              >
+                {rating.Source}
+                <span className="badge text-bg-primary rounded-pill">
+                  {rating.Value}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="content">
           <p className="text-gray-600 d-flex align-items-center justify-content-between">
@@ -220,6 +234,30 @@ export const MovieDetails = ({ id }) => {
           </p>
           <p className="text-gray-600">
             <strong>Language:</strong> {state.movie.Language}
+          </p>
+          <p className="text-gray-600">
+            <strong>Countries:</strong>
+            {(state.movie.Country || "").split(", ").map((country, index) => (
+              <Flag key={country} country={country} />
+            ))}
+          </p>
+          <p className="text-gray-600">
+            <strong>Released:</strong> {state.movie.Released}
+          </p>
+          <p className="text-gray-600">
+            <strong>Runtime:</strong> {state.movie.Runtime}
+          </p>
+          <p className="text-gray-600">
+            <strong>IMDb Votes :</strong> {state.movie.imdbRating} ({state.movie.imdbVotes}{" "}
+            votes)
+          </p>
+
+          <p className="mt-4 text-gray-700">{state.movie.Plot}</p>
+          <p className="mt-2 text-gray-600">
+            <strong>Box Office:</strong> {state.movie.BoxOffice}
+          </p>
+          <p className="mt-2 text-gray-600">
+            <strong>Awards:</strong> {state.movie.Awards}
           </p>
         </div>
       </div>

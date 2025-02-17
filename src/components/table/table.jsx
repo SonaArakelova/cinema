@@ -1,5 +1,6 @@
 import React from 'react';
 import './table.css'
+import imdb from "../../assets/images/imdb.png"
 
 export const Table = ({ data, onRowClick, setMovies }) => {
   
@@ -11,9 +12,16 @@ export const Table = ({ data, onRowClick, setMovies }) => {
     setMovies(updatedMovies);  
   };
 
+  const handleOpenIMDBbMovie = (event, imdbID) => {
+    event.stopPropagation();
+    window.open(`https://www.imdb.com/title/${imdbID}`, " ");
+  };
+
+
+
 
   return (
-    <table className="table mt-3 table-hover">
+    <table className="table mt-3 ">
       <thead className="thead-dark">
         <tr>
           <th>Poster</th>
@@ -32,7 +40,18 @@ export const Table = ({ data, onRowClick, setMovies }) => {
             <td>{movie.Title}</td>
             <td>{movie.Year}</td>
             <td>{movie.Type}</td>
-            <td className="text-md-end">{movie.imdbID}</td>
+            <td className="text-md-end">
+            <div className="d-flex justify-content-end">
+                <button
+                  type="button"
+                  className="btn btn-link"
+                  onClick={(event) => handleOpenIMDBbMovie(event, movie.imdbID)}
+                >
+                  Watch on IMDB
+                  <img src={imdb} alt="" width={40} />
+                </button>
+              </div>
+            </td>
             <td>
               <button 
               className='remove-button'

@@ -6,3 +6,9 @@ strong{
     color: rgb(236, 221, 106);
 }
 
+.list-group-item{
+    background-color:rgb(236, 221, 106)!important;
+    margin-top: 10px !important;
+    border: none !important;
+
+}
