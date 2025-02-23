@@ -1,7 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useContext } from "react";
+import { MoviesContext, tab } from "../../contexts/moviecontext"
 import "./header.css";
 
-export const Header = ({ onSearch, searchQuery }) => {
+export const Header = () => {
+  const { searchQuery, onSearch, activeTab } = useContext(MoviesContext);
   const inputRef = useRef(null);
 
   useEffect(() => {
@@ -16,6 +18,7 @@ export const Header = ({ onSearch, searchQuery }) => {
         </div>
         <i class="bi bi-film"></i>        
       </div>
+      {activeTab === tab.search && (
       <input
         ref={inputRef}
         value={searchQuery}
@@ -24,6 +27,7 @@ export const Header = ({ onSearch, searchQuery }) => {
         placeholder="Search..."
         onChange={(e) => onSearch(e.target.value)}
       />
+      )}
        <div className="buttons">
         <button>OMDb <span className="button-text"> Pro</span> </button>
         <button>Sign in</button>

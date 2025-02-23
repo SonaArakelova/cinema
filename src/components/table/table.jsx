@@ -2,23 +2,14 @@ import React from 'react';
 import './table.css'
 import imdb from "../../assets/images/imdb.png"
 
-export const Table = ({ data, onRowClick, setMovies }) => {
+export const Table = ({ data, onRowClick }) => {
   
-  const handleRemove = (movieToRemove) => {
-    const updatedMovies = data.filter(movie => movie.imdbID !== movieToRemove.imdbID);
-    
-    localStorage.setItem('movies', JSON.stringify(updatedMovies));
-
-    setMovies(updatedMovies);  
-  };
+  
 
   const handleOpenIMDBbMovie = (event, imdbID) => {
     event.stopPropagation();
     window.open(`https://www.imdb.com/title/${imdbID}`, " ");
   };
-
-
-
 
   return (
     <table className="table mt-3 ">
@@ -47,7 +38,8 @@ export const Table = ({ data, onRowClick, setMovies }) => {
                   className="btn btn-link"
                   onClick={(event) => handleOpenIMDBbMovie(event, movie.imdbID)}
                 >
-                  Watch on IMDB
+                 You can Watch on IMDB
+
                   <img src={imdb} alt="" width={40} />
                 </button>
               </div>
@@ -57,7 +49,7 @@ export const Table = ({ data, onRowClick, setMovies }) => {
               className='remove-button'
                 onClick={(e) => {
                   e.stopPropagation(); 
-                  handleRemove(movie); 
+                  // handleRemove(movie); 
                 }}
               >
                 Remove movie

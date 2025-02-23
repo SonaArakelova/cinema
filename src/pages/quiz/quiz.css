@@ -1,0 +1,19 @@
+:root {
+    --color-darkest: #7dbeef;
+    --color-dark: #dddddd;
+    --color-medium: #ced4da;
+    --color-light: #555353df;
+    --color-theme: #e1de43;
+    --color-accent: #242eaf;
+  }
+  
+  .quiz-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .main {
+    width: 50rem;
+  }
