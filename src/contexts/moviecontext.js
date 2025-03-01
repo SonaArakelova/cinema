@@ -9,7 +9,7 @@ export const tab = {
 };
 
 export const MoviesProvider = ({ children }) => {
-  const [searchQuery, setSearchQuery] = useState("Angelina Jolie");
+  const [searchQuery, setSearchQuery] = useState("Cobra kai");
   const [activeTab, setActiveTab] = useState(tab.search);
 
   return (

@@ -9,7 +9,7 @@ export const StartScreen = () => {
 
   return (
     <div className="start">
-      <h2> The Movie Quiz</h2>
+      <h2> Welcome to the Movie Quiz</h2>
       <h3>{numberOfQuestions} questions for testing your skills</h3>
       <button
         className="btn btn-primary"

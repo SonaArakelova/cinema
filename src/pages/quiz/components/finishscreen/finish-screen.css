@@ -1,0 +1,21 @@
+.result {
+    color: var(--color-light);
+    border-radius: 100px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 1.6rem;
+  }
+  
+  .result span {
+    font-size: 3rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    margin-right: 4px;
+  }
+  
+  .highscore {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 5rem;
+  }
