@@ -13,3 +13,10 @@
 ul{
     background-color: rgb(20, 19, 19);
 }
+
+button{
+    border: none !important;
+    border-radius: 0 !important;
+
+
+}

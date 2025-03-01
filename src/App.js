@@ -20,7 +20,7 @@ const Tabs = () => {
   return (
     <ul className="nav nav-tabs">
       <li className="nav-item ">
-        <button
+        <button 
           onClick={() => setActiveTab(tab.search)}
           className={getTabClasses(tab.search)}
         >
